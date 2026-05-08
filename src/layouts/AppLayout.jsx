@@ -1,6 +1,7 @@
 // Layout for when a user logs into the application
 import { AppBar, Box, Toolbar, Typography, Container, Button, Avatar, IconButton } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
+import { Calendar, ListTodo, Users } from 'lucide-react';
 
 export default function AppLayout() {
     return(
@@ -21,18 +22,21 @@ export default function AppLayout() {
                                 component={Link}
                                 to="/tasks"
                             >
+                                <ListTodo />
                                 Tasks
                             </Button>
                             <Button
                                 component={Link}
                                 to="/groups"
                             >
+                                <Users />
                                 Groups
                             </Button>
                             <Button
                                 component={Link}
                                 to="/calendar"
                             >
+                                <Calendar />
                                 Calendar
                             </Button>
                             <IconButton>

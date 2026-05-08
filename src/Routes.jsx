@@ -6,9 +6,9 @@ import AppLayout from "./layouts/AppLayout";
 import HomePage from "./pages/HomePage";
 //import LoginPage from "./pages/LoginPage";
 
-//import Dashboard from "./pages/Dashboard";
-//import TasksPage from "./pages/TasksPage";
-//import GroupsPage from "./pages/GroupsPage";
+import TasksPage from "./pages/TasksPage";
+import GroupsPage from "./pages/GroupsPage";
+import CalendarPage from "./pages/CalendarPage";
 
 import NotFound from "./pages/NotFound";
 
@@ -27,7 +27,10 @@ export const router = createBrowserRouter([
         path: "/",
         Component: AppLayout,
         children: [
-            { index: true, element: <HomePage /> }
+            { index: true, element: <HomePage /> },
+            { path: "tasks", element: <TasksPage />},
+            { path: "groups", element: <GroupsPage />},
+            { path: "calendar", element: <CalendarPage />}
         ],
     },
 

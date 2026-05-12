@@ -9,6 +9,8 @@ export default function TaskCard({task})
             return 'success';
         case 'in-progress':
             return 'primary';
+        case 'todo':
+            return '#ff9800'
         default:
             return 'default';
         }
